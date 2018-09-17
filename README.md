@@ -6,7 +6,7 @@ wrapper for TA-Lib, provide intellisense in vscode and PyCharm
 ## Usage
 
 ```bash
-pip install talib
+pip install ulib
 ```
 
 ```python
@@ -14,6 +14,12 @@ import numpy
 import ulib
 close = numpy.random.random(100)
 ulib.SMA(close)
+```
+
+# Publish
+
+```bash
+python3 setup.py bdist_wheel upload
 ```
 
 ## Reference

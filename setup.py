@@ -12,7 +12,7 @@ with open(join(dirname(__file__), 'README.md'), 'rb') as f:
     LONG_DESCRIPTION = f.read().decode('utf8').strip()
 
 setup(
-    name='talib',
+    name='ulib',
     version=VERSION,
     description='talib wrapper for intellisense',
     long_description=LONG_DESCRIPTION,
