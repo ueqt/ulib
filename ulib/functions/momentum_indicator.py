@@ -204,18 +204,179 @@ def MOM(close, timeperiod=10):
     real = MOM(close, timeperiod=10)
     '''
     return talib.MOM(close, timeperiod)
-#         'PLUS_DI',
-#         'PLUS_DM',
-#         'PPO',
-#         'ROC',
-#         'ROCP',
-#         'ROCR',
-#         'ROCR100',
-#         'RSI',
-#         'STOCH',
-#         'STOCHF',
-#         'STOCHRSI',
-#         'TRIX',
-#         'ULTOSC',
-#         'WILLR',
-#         ],
+
+
+def PLUS_DI(high, low, close, timeperiod=14):
+    ''' Plus Directional Indicator
+
+    分组: Momentum Indicator 动量指标
+
+    简介:
+
+    real = PLUS_DI(high, low, close, timeperiod=14)
+    '''
+    return talib.PLUS_DI(high, low, close, timeperiod)
+
+
+def PLUS_DM(high, low, timeperiod=14):
+    ''' Plus Directional Movement
+
+    分组: Momentum Indicator 动量指标
+
+    简介:
+
+    real = PLUS_DM(high, low, timeperiod=14)
+    '''
+    return talib.PLUS_DM(high, low, timeperiod)
+
+
+def PPO(close, fastperiod=12, slowperiod=26, matype=0):
+    ''' Percentage Price Oscillator 价格震荡百分比指数
+
+    分组: Momentum Indicator 动量指标
+
+    简介: 价格震荡百分比指标（PPO）是一个和MACD指标非常接近的指标。
+    PPO标准设定和MACD设定非常相似：12,26,9和PPO，
+    和MACD一样说明了两条移动平均线的差距，
+    但是它们有一个差别是PPO是用百分比说明。
+
+    real = PPO(close, fastperiod=12, slowperiod=26, matype=0)
+    '''
+    return talib.PPO(close, fastperiod, slowperiod, matype)
+
+
+def ROC(close, timeperiod=10):
+    ''' Rate of change 变动率指标
+
+    分组: Momentum Indicator 动量指标
+
+    简介: ROC是由当天的股价与一定的天数之前的某一天股价比较，
+    其变动速度的大小,来反映股票市变动的快慢程度
+    ((price/prevPrice)-1)*100
+
+    real = ROC(close, timeperiod=10)
+    '''
+    return talib.ROC(close, timeperiod)
+
+
+def ROCP(close, timeperiod=10):
+    ''' Rate of change Percentage
+
+    分组: Momentum Indicator 动量指标
+
+    简介: (price-prevPrice)/prevPrice
+
+    real = ROCP(close, timeperiod=10)
+    '''
+    return talib.ROCP(close, timeperiod)
+
+
+def ROCR(close, timeperiod=10):
+    ''' Rate of change ratio
+
+    分组: Momentum Indicator 动量指标
+
+    简介: (price/prevPrice)
+
+    real = ROCR(close, timeperiod=10)
+    '''
+    return talib.ROCR(close, timeperiod)
+
+
+def ROCR100(close, timeperiod=10):
+    ''' Rate of change ratio 100 scale
+
+    分组: Momentum Indicator 动量指标
+
+    简介: (price/prevPrice)*100
+
+    real = ROCR100(close, timeperiod=10)
+    '''
+    return talib.ROCR100(close, timeperiod)
+
+
+def RSI(close, timeperiod=14):
+    ''' Relative Strength Index 相对强弱指数
+
+    分组: Momentum Indicator 动量指标
+
+    简介: 是通过比较一段时期内的平均收盘涨数和平均收盘跌数来分析市场买沽盘的意向和实力，从而作出未来市场的走势。
+
+    real = RSI(close, timeperiod=14)
+    '''
+    return talib.RSI(close, timeperiod)
+
+
+def STOCH(high, low, close, fastk_period=5, slowk_period=3, slowk_matype=0, slowd_period=3, slowd_matype=0):
+    ''' Stochastic 随机指标,俗称KD
+
+    分组: Momentum Indicator 动量指标
+
+    简介: 随机指标,俗称KD
+
+    slowk, slowd = STOCH(high, low, close, fastk_period=5, slowk_period=3, slowk_matype=0, slowd_period=3, slowd_matype=0)
+    '''
+    return talib.STOCH(high, low, close, fastk_period, slowk_period, slowk_matype, slowd_period, slowd_matype)
+
+
+def STOCHF(high, low, close, fastk_period=5, fastd_period=3, fastd_matype=0):
+    ''' Stochastic Fast
+
+    分组: Momentum Indicator 动量指标
+
+    简介:
+
+    fastk, fastd = STOCHF(high, low, close, fastk_period=5, fastd_period=3, fastd_matype=0)
+    '''
+    return talib.STOCHF(high, low, close, fastk_period, fastd_period, fastd_matype)
+
+
+def STOCHRSI(close, timeperiod=14, fastk_period=5, fastd_period=3, fastd_matype=0):
+    ''' Stochastic Relative Strength Index
+
+    分组: Momentum Indicator 动量指标
+
+    简介:
+
+    fastk, fastd = STOCHRSI(close, timeperiod=14, fastk_period=5, fastd_period=3, fastd_matype=0)
+    '''
+    return talib.STOCHRSI(close, timeperiod, fastk_period, fastd_period, fastd_matype)
+
+
+def TRIX(close, timeperiod=30):
+    ''' 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
+
+    分组: Momentum Indicator 动量指标
+
+    简介:
+
+    real = TRIX(close, timeperiod=30)
+    '''
+    return talib.TRIX(close, timeperiod)
+
+
+def ULTOSC(high, low, close, timeperiod1=7, timeperiod2=14, timeperiod3=28):
+    ''' Ultimate Oscillator 终极波动指标
+
+    分组: Momentum Indicator 动量指标
+
+    简介: UOS是一种多方位功能的指标，除了趋势确认及超买超卖方面的作用之外，
+    它的“突破”讯号不仅可以提供最适当的交易时机之外，更可以进一步加强指标的可靠度。
+
+    real = ULTOSC(high, low, close, timeperiod1=7, timeperiod2=14, timeperiod3=28)
+    '''
+    return talib.ULTOSC(high, low, close, timeperiod1, timeperiod2, timeperiod3)
+
+
+def WILLR(high, low, close, timeperiod=14):
+    ''' Williams' %R 威廉指标
+
+    分组: Momentum Indicator 动量指标
+
+    简介: WMS表示的是市场处于超买还是超卖状态。
+    股票投资分析方法主要有如下三种：基本分析、技术分析、演化分析。
+    在实际应用中，它们既相互联系，又有重要区别。
+
+    real = WILLR(high, low, close, timeperiod=14)
+    '''
+    return talib.WILLR(high, low, close, timeperiod)
