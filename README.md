@@ -16,6 +16,15 @@ close = numpy.random.random(100)
 ulib.SMA(close)
 ```
 
+or
+
+```python
+import numpy
+from ulib import *
+close = numpy.random.random(100)
+SMA(close)
+```
+
 # Publish
 
 ```bash

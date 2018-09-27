@@ -1,5 +1,5 @@
 from os.path import dirname, join
-from setuptools import setup, find_packages
+from setuptools import setup
 try:  # for pip >= 10
     from pip._internal.req import parse_requirements
 except ImportError:  # for pip <= 9.0.3

@@ -3,13 +3,13 @@ import talib
 from .functions.overlap_studies import *
 from .functions.momentum_indicator import *
 from .functions.volume_indicator import *
-from .volatility_indicators import *
-from .price_transform import *
-from .cycle_indicators import *
-from .pattern_recognition import *
-from .statistics_functions import *
-from .math_transform import *
-from .math_operators import *
+from .functions.volatility_indicators import *
+from .functions.price_transform import *
+from .functions.cycle_indicators import *
+from .functions.pattern_recognition import *
+from .functions.statistics_functions import *
+from .functions.math_transform import *
+from .functions.math_operators import *
 
 # region 默认方法
 
