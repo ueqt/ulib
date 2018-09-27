@@ -1,0 +1,4 @@
+include README.rst requirements.txt
+recursive-include * VERSION.txt
+recursive-include * *.py
+prune tests/

@@ -1,5 +1,5 @@
 from os.path import dirname, join
-from setuptools import setup
+from setuptools import setup, find_packages
 try:  # for pip >= 10
     from pip._internal.req import parse_requirements
 except ImportError:  # for pip <= 9.0.3
@@ -8,7 +8,7 @@ except ImportError:  # for pip <= 9.0.3
 with open(join(dirname(__file__), 'ulib/VERSION.txt'), 'rb') as f:
     VERSION = f.read().decode('utf8').strip()
 
-with open(join(dirname(__file__), 'README.md'), 'rb') as f:
+with open(join(dirname(__file__), 'README.rst'), 'rb') as f:
     LONG_DESCRIPTION = f.read().decode('utf8').strip()
 
 setup(
@@ -18,10 +18,11 @@ setup(
     long_description=LONG_DESCRIPTION,
     author='ueqt',
     author_email='ueqtxu@gmail.com',
-    url='https://github.com/ueqt/talib',
-    license='MIT',
-    packages=['ulib'],
+    url='https://github.com/ueqt/ulib',
+    license='GPL v2',
+    packages=find_packages(exclude=['tests']),
     include_package_data=True,
+    test_suite='tests',
     zip_safe=False,
     install_requires=[str(ir.req) for ir in parse_requirements(
         'requirements.txt', session=False

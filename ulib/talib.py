@@ -2,12 +2,12 @@
 import talib
 from .functions.overlap_studies import *
 from .functions.momentum_indicator import *
-from .functions.volume_indicator import *
+from .functions.volume_indicators import *
 from .functions.volatility_indicators import *
 from .functions.price_transform import *
 from .functions.cycle_indicators import *
 from .functions.pattern_recognition import *
-from .functions.statistics_functions import *
+from .functions.statistic_functions import *
 from .functions.math_transform import *
 from .functions.math_operators import *
 
