@@ -716,9 +716,67 @@ def CDLTASUKIGAP(open, high, low, close):
     integer = CDLTASUKIGAP(open, high, low, close)
     '''
     return talib.CDLTASUKIGAP(open, high, low, close)
-#         'CDLTHRUSTING',
-#         'CDLTRISTAR',
-#         'CDLUNIQUE3RIVER',
-#         'CDLUPSIDEGAP2CROWS',
-#         'CDLXSIDEGAP3METHODS',
-#         ],
+
+
+def CDLTHRUSTING(open, high, low, close):
+    ''' Thrusting Pattern 插入
+
+    分组: Pattern Recognition 形态识别
+
+    简介: 二日K线模式，与颈上线类似，下跌趋势中，第一日长阴线，第二日开盘价跳空，
+    收盘价略低于前一日实体中部，与颈上线相比实体较长，预示着趋势持续。
+
+    integer = CDLTHRUSTING(open, high, low, close)
+    '''
+    return talib.CDLTHRUSTING(open, high, low, close)
+
+
+def CDLTRISTAR(open, high, low, close):
+    ''' Tristar Pattern 三星
+
+    分组: Pattern Recognition 形态识别
+
+    简介: 三日K线模式，由三个十字组成， 第二日十字必须高于或者低于第一日和第三日，预示着反转。
+
+    integer = CDLTRISTAR(open, high, low, close)
+    '''
+    return talib.CDLTRISTAR(open, high, low, close)
+
+
+def CDLUNIQUE3RIVER(open, high, low, close):
+    ''' Unique 3 River 奇特三河床
+
+    分组: Pattern Recognition 形态识别
+
+    简介: 三日K线模式，下跌趋势中，第一日长阴线，第二日为锤头，最低价创新低，第三日开盘价低于第二日收盘价，收阳线，
+    收盘价不高于第二日收盘价，预示着反转，第二日下影线越长可能性越大。
+
+    integer = CDLUNIQUE3RIVER(open, high, low, close)
+    '''
+    return talib.CDLUNIQUE3RIVER(open, high, low, close)
+
+
+def CDLUPSIDEGAP2CROWS(open, high, low, close):
+    ''' Upside Gap Two Crows 向上跳空的两只乌鸦
+
+    分组: Pattern Recognition 形态识别
+
+    简介: 三日K线模式，第一日阳线，第二日跳空以高于第一日最高价开盘，
+    收阴线，第三日开盘价高于第二日，收阴线，与第一日比仍有缺口。
+
+    integer = CDLUPSIDEGAP2CROWS(open, high, low, close)
+    '''
+    return talib.CDLUPSIDEGAP2CROWS(open, high, low, close)
+
+
+def CDLXSIDEGAP3METHODS(open, high, low, close):
+    ''' Upside/Downside Gap Three Methods 上升/下降跳空三法
+
+    分组: Pattern Recognition 形态识别
+
+    简介: 五日K线模式，以上升跳空三法为例，上涨趋势中，第一日长阳线，第二日短阳线，第三日跳空阳线，第四日阴线，
+    开盘价与收盘价于前两日实体内， 第五日长阳线，收盘价高于第一日收盘价，预示股价上升。
+
+    integer = CDLXSIDEGAP3METHODS(open, high, low, close)
+    '''
+    return talib.CDLXSIDEGAP3METHODS(open, high, low, close)
