@@ -1,4 +1,5 @@
 # 表达式函数
+import numpy as np
 
 
 def ABS(x):
@@ -7,4 +8,4 @@ def ABS(x):
 ABS(X)返回X的绝对值
 例如：ABS(-34)返回34
     '''
-    return x
+    return np.abs(x)
